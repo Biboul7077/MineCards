@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://ccrhxvs0m6oe4"]
+
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_das4f"]
+[ext_resource type="Texture2D" uid="uid://coie40io2uq7y" path="res://Assets/Sprites/Cards/IceBiome.png" id="2_das4f"]
+
+[resource]
+script = ExtResource("1_das4f")
+card_name = "Golem"
+texture = ExtResource("2_das4f")
+effect_name = "set_biome"
+value = 10

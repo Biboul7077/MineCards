@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dnmnrro0ee7t1"]
+
+[ext_resource type="Script" uid="uid://cymr8o0l3wclc" path="res://Scenes/Scripts/card_on_board.gd" id="1_shg66"]
+[ext_resource type="Texture2D" uid="uid://cc8dj4w27r7ev" path="res://Assets/Sprites/Cards/Kibble.png" id="3_bhlym"]
+
+[node name="CardOnBoard" type="Container" unique_id=673292341]
+custom_minimum_size = Vector2(84, 112)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_shg66")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713387254]
+position = Vector2(0, -32)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_bhlym")
+centered = false

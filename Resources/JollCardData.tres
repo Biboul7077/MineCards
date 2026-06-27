@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://7ia6sijvc7tf"]
+
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_w1nvw"]
+[ext_resource type="Texture2D" uid="uid://cjal2mmm6rwpl" path="res://Assets/Sprites/Cards/IMG_6264.jpg" id="2_jfcjx"]
+
+[resource]
+script = ExtResource("1_w1nvw")
+card_name = "Joll"
+texture = ExtResource("2_jfcjx")
+effect_name = "set_health"
+value = -9999

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://u55bj2xwxigl"]
+
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_6es6o"]
+[ext_resource type="Texture2D" uid="uid://dgf73n88ulpa2" path="res://Assets/Sprites/Cards/Plains2.png" id="2_6es6o"]
+
+[resource]
+script = ExtResource("1_6es6o")
+card_name = "Plain"
+texture = ExtResource("2_6es6o")
+effect_name = "set_biome"

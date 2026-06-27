@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://douafud42gtkj"]
+
+[ext_resource type="PackedScene" uid="uid://b88yaqif0fduk" path="res://Scenes/hand.tscn" id="1_8gbba"]
+[ext_resource type="Script" uid="uid://b018tcn0v6tfb" path="res://Scenes/card_manager.gd" id="1_bo1nx"]
+
+[sub_resource type="GDScript" id="GDScript_bo1nx"]
+script/source = "extends Node2D
+@onready var hand: Node2D = $Hand
+const BEE_CARD_DATA = preload(\"uid://bdi5ekhxi6ob8\")
+const JOLL_CARD_DATA = preload(\"uid://7ia6sijvc7tf\")
+const PLAIN_CARD_DATA = preload(\"uid://u55bj2xwxigl\")
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	for i in deck:
+		hand.add_card(BEE_CARD_DATA)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Main" type="Node2D" unique_id=2038390801]
+script = SubResource("GDScript_bo1nx")
+
+[node name="Hand" parent="." unique_id=266571012 instance=ExtResource("1_8gbba")]
+
+[node name="CardManager" type="Node2D" parent="." unique_id=1796489474]
+script = ExtResource("1_bo1nx")

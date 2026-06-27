@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dxyc27dcvi1bx"]
+
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ycowj"]
+[ext_resource type="Texture2D" uid="uid://d1be11ylqj388" path="res://Assets/Sprites/Cards/Golem.png" id="2_ycowj"]
+
+[resource]
+script = ExtResource("1_ycowj")
+card_name = "Bee"
+texture = ExtResource("2_ycowj")
+effect_name = "set_health"
+value = -6

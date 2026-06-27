@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cytyk26djps2s"]
+
+[ext_resource type="Script" uid="uid://cjq35ihhxm8xb" path="res://Scenes/Scripts/card_placement.gd" id="1_bvo1i"]
+
+[node name="CardPlacement" type="Control" unique_id=1666463127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -568.0
+offset_bottom = -352.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bvo1i")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

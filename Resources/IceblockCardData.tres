@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://civbdfvia07n0"]
+
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ocn7k"]
+[ext_resource type="Texture2D" uid="uid://dg833jrfsi2ah" path="res://Assets/Sprites/Cards/Ice.png" id="2_ocn7k"]
+
+[resource]
+script = ExtResource("1_ocn7k")
+card_name = "Ice Biome"
+texture = ExtResource("2_ocn7k")
+effect_name = "set_health"
+value = -2

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cxw6rv70lghs6"]
+
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ldw7q"]
+[ext_resource type="Texture2D" uid="uid://cc8dj4w27r7ev" path="res://Assets/Sprites/Cards/Kibble.png" id="2_ldw7q"]
+
+[resource]
+script = ExtResource("1_ldw7q")
+card_name = "Bee"
+texture = ExtResource("2_ldw7q")
+effect_name = "set_health"
+value = -12
