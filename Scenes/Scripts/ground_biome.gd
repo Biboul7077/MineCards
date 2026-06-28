@@ -9,7 +9,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func changing_biome_texture(next_biome):
+func changing_biome_texture(biome):
 	for cell in get_used_cells():
 		var tile_data = get_cell_tile_data(cell)
 
@@ -18,4 +18,4 @@ func changing_biome_texture(next_biome):
 
 			print("Cellule :", cell, " ID :", source_id)
 
-			set_cell(cell,0,Vector2i(0,2))
+			set_cell(cell,0,biome[0])
