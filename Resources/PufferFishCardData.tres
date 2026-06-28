@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://gstpso5hmokm"]
+
+[ext_resource type="Script" uid="uid://ddor6u2ihhqel" path="res://Scenes/Scripts/Effects/health_effect.gd" id="1_simq7"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="2_v7whr"]
+[ext_resource type="Texture2D" uid="uid://bvshw5ry4x7gb" path="res://Assets/Sprites/Cards/Puffer.png" id="3_simq7"]
+
+[sub_resource type="Resource" id="Resource_l6nnb"]
+script = ExtResource("1_simq7")
+amount = -3
+biome = "OCEAN"
+metadata/_custom_type_script = "uid://ddor6u2ihhqel"
+
+[resource]
+script = ExtResource("2_v7whr")
+card_name = "PufferFish"
+texture = ExtResource("3_simq7")
+effect = SubResource("Resource_l6nnb")

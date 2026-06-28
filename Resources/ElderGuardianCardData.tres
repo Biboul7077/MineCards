@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bwbf2x1etfd0x"]
+
+[ext_resource type="Script" uid="uid://cin2fhmrn6yew" path="res://Scenes/Scripts/Effects/armor_effect.gd" id="1_4fgsv"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="2_80mre"]
+[ext_resource type="Texture2D" uid="uid://dt3eygftpu71y" path="res://Assets/Sprites/Cards/Elder.png" id="3_80mre"]
+
+[sub_resource type="Resource" id="Resource_paxi7"]
+script = ExtResource("1_4fgsv")
+amount = 7
+biome = "OCEAN"
+metadata/_custom_type_script = "uid://cin2fhmrn6yew"
+
+[resource]
+script = ExtResource("2_80mre")
+card_name = "ElderGuardian"
+texture = ExtResource("3_80mre")
+effect = SubResource("Resource_paxi7")

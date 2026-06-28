@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://u0ikkeckrxy1"]
+
+[ext_resource type="Script" uid="uid://c2ljrxo71bybk" path="res://Scenes/Scripts/Effects/biome_effect.gd" id="1_26rl2"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="2_21gcy"]
+[ext_resource type="Texture2D" uid="uid://brn30rnvk5xl1" path="res://Assets/Sprites/Cards/Ocean.png" id="3_21gcy"]
+
+[sub_resource type="Resource" id="Resource_xx85h"]
+script = ExtResource("1_26rl2")
+biome = "OCEAN"
+metadata/_custom_type_script = "uid://c2ljrxo71bybk"
+
+[resource]
+script = ExtResource("2_21gcy")
+card_name = "Ocean"
+texture = ExtResource("3_21gcy")
+effect = SubResource("Resource_xx85h")
