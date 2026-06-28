@@ -25,7 +25,7 @@ func _on_gui_input(event: InputEvent) -> void:
 			if card_highlighted:
 				Game.data_card_selected = data
 				var card_temp = card.instantiate()
-				get_tree().get_root().get_node("Board/CardHolder").add_child(card_temp)
+				Game.card_holder_node.add_child(card_temp)
 				Game.card_selected = true
 				sprite_2d.visible = false
 		elif event.button_mask == 0:
@@ -34,7 +34,7 @@ func _on_gui_input(event: InputEvent) -> void:
 				sprite_2d.visible = true
 			else:
 				self.queue_free()
-				get_node("../../CardPlacement").place_card()
-			for i in get_tree().get_root().get_node("Board/CardHolder").get_child_count():
-				get_tree().get_root().get_node("Board/CardHolder").get_child(i).queue_free()
+				Game.card_placement_node.place_card()
+			for child in Game.card_holder_node.get_children():
+				child.queue_free()
 			Game.card_selected = false

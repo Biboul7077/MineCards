@@ -1,5 +1,5 @@
 extends Control
-var card_on_board = preload("uid://cymr8o0l3wclc")
+var card_on_board = preload("uid://dnmnrro0ee7t1")
 
 func _on_mouse_entered() -> void:
 	Game.mouse_on_placement = true

@@ -4,6 +4,8 @@ const MAX_HEALTH := 17
 enum PLAYERS {PLAYER0,PLAYER1}
 
 var card_selected := false
+var card_holder_node: Node
+var card_placement_node: Control
 var data_card_selected : CardData
 var mouse_on_placement = false
 var current_player := PLAYERS.PLAYER0
