@@ -45,9 +45,7 @@ func _build_health_pairs() -> void:
 				"below_atlas": get_cell_atlas_coords(mirrored),
 			})
 
-	# Ordre de "vidage" de la barre, de gauche à droite.
-	# Change la clé si tu veux un autre sens de lecture.
-	health_pairs.sort_custom(func(a, b): return a["above"].x < b["above"].x)
+	health_pairs.sort_custom(func(a, b): return a["above"].x > b["above"].x)
 
 func changing_health_texture(value: Dictionary) -> void:
 	if value["target"] != target:
@@ -58,7 +56,7 @@ func changing_health_texture(value: Dictionary) -> void:
 
 		for i in health_pairs.size():
 			var pair = health_pairs[i]
-			if i > health_max - missing_health:
+			if i < missing_health:
 				set_cell(pair["above"], DAMAGED_SOURCE, DAMAGED_ATLAS)
 				set_cell(pair["below"], DAMAGED_SOURCE, DAMAGED_ATLAS)
 			else:

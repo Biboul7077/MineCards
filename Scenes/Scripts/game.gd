@@ -7,10 +7,12 @@ var dataCardSelected : CardData
 var mouseOnPlacement = false
 var current_player := PLAYERS.PLAYER0
 var current_biome := ["",""]
+var armor := [0,0]
 var health := [17,17]
 
-signal changing_biome(biome)
-signal changing_health(value)
+signal changing_biome(args)
+signal changing_health(args)
+signal changing_armor(args)
 
 func set_biome(target,biome):
 	current_biome[target] = biome
@@ -19,8 +21,18 @@ func set_biome(target,biome):
 func set_health(target,value,biome):
 	if biome == current_biome[target] and biome != "":
 		value *= 1.5
-	health[target] = clamp(health[target]+value,0,17)
+	if value < 0:
+		print(armor[target])
+		health[target] = clamp(health[target]+armor[target]+value,0,17)
+		armor[target] = 0
+	else:
+		health[target] = clamp(health[target]+value,0,17)
 	emit_signal("changing_health",{"damage":health[target],"target":target})
+
+func set_armor(target,value,biome):
+	if biome == current_biome[target] and biome != "":
+		value *= 1.5
+	armor[target] = value
 
 func get_targets(targeting: CardData.Targeting, caster: int) -> Array[int]:
 	var opponent := 1 - caster
