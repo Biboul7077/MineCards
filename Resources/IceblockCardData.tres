@@ -1,13 +1,16 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://civbdfvia07n0"]
 
-[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ocn7k"]
+[ext_resource type="Script" uid="uid://ddor6u2ihhqel" path="res://Scenes/Scripts/Effects/health_effect.gd" id="1_1gtna"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="1_ocn7k"]
 [ext_resource type="Texture2D" uid="uid://dg833jrfsi2ah" path="res://Assets/Sprites/Cards/Ice.png" id="2_ocn7k"]
+
+[sub_resource type="Resource" id="Resource_bt6te"]
+script = ExtResource("1_1gtna")
+amount = 2
+metadata/_custom_type_script = "uid://ddor6u2ihhqel"
 
 [resource]
 script = ExtResource("1_ocn7k")
 card_name = "Ice Block"
 texture = ExtResource("2_ocn7k")
-effect_name = "set_health"
-target = "SELF"
-biome = "ICEBIOME"
-value = -2
+effect = SubResource("Resource_bt6te")

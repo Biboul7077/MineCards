@@ -1,24 +1,12 @@
 [gd_scene format=3 uid="uid://yweyrc4x4ycp"]
 
+[ext_resource type="Script" uid="uid://ca78r0hkd4sam" path="res://Scenes/Scripts/Card/card_holder.gd" id="1_ltamu"]
 [ext_resource type="Texture2D" uid="uid://cc8dj4w27r7ev" path="res://Assets/Sprites/Cards/Kibble.png" id="3_mx4ve"]
-
-[sub_resource type="GDScript" id="GDScript_vr8ag"]
-script/source = "extends Container
-@onready var sprite_2d: Sprite2D = $Sprite2D
-var data := Game.dataCardSelected
-var cardHeld = \"\"
-
-func _ready() -> void:
-	sprite_2d.texture = data.texture
-
-func _process(delta: float) -> void:
-	self.global_position = get_global_mouse_position()
-"
 
 [node name="CardHolder" type="Container" unique_id=673292341]
 offset_right = 80.0
 offset_bottom = 112.0
-script = SubResource("GDScript_vr8ag")
+script = ExtResource("1_ltamu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1713387254]
 scale = Vector2(0.2, 0.2)

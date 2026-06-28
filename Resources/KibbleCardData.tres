@@ -1,11 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cxw6rv70lghs6"]
 
-[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ldw7q"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="1_ldw7q"]
+[ext_resource type="Script" uid="uid://ddor6u2ihhqel" path="res://Scenes/Scripts/Effects/health_effect.gd" id="1_uybmn"]
 [ext_resource type="Texture2D" uid="uid://cc8dj4w27r7ev" path="res://Assets/Sprites/Cards/Kibble.png" id="2_ldw7q"]
+
+[sub_resource type="Resource" id="Resource_a1dk6"]
+script = ExtResource("1_uybmn")
+amount = -12
+metadata/_custom_type_script = "uid://ddor6u2ihhqel"
 
 [resource]
 script = ExtResource("1_ldw7q")
 card_name = "Kibble"
 texture = ExtResource("2_ldw7q")
-effect_name = "set_health"
-value = -12
+targeting = 1
+effect = SubResource("Resource_a1dk6")

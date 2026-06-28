@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdpcythmlvs3r"]
 
-[ext_resource type="Script" uid="uid://dwh7gdkvpbt8o" path="res://Scenes/Scripts/card.gd" id="1_wf8id"]
+[ext_resource type="Script" uid="uid://dwh7gdkvpbt8o" path="res://Scenes/Scripts/Card/card.gd" id="1_wf8id"]
 [ext_resource type="Texture2D" uid="uid://cc8dj4w27r7ev" path="res://Assets/Sprites/Cards/Kibble.png" id="2_brehn"]
 [ext_resource type="Resource" uid="uid://cxw6rv70lghs6" path="res://Resources/KibbleCardData.tres" id="2_eumee"]
 

@@ -1,12 +1,17 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dxyc27dcvi1bx"]
 
-[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ycowj"]
+[ext_resource type="Script" uid="uid://ddor6u2ihhqel" path="res://Scenes/Scripts/Effects/health_effect.gd" id="1_n64ll"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="1_ycowj"]
 [ext_resource type="Texture2D" uid="uid://d1be11ylqj388" path="res://Assets/Sprites/Cards/Golem.png" id="2_ycowj"]
+
+[sub_resource type="Resource" id="Resource_2eu5k"]
+script = ExtResource("1_n64ll")
+amount = -6
+metadata/_custom_type_script = "uid://ddor6u2ihhqel"
 
 [resource]
 script = ExtResource("1_ycowj")
 card_name = "Golem"
 texture = ExtResource("2_ycowj")
-effect_name = "set_health"
-biome = "PLAINS"
-value = -6
+targeting = 1
+effect = SubResource("Resource_2eu5k")

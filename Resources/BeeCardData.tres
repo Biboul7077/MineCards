@@ -1,12 +1,16 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bdi5ekhxi6ob8"]
 
-[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_ca040"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="1_ca040"]
+[ext_resource type="Script" uid="uid://ddor6u2ihhqel" path="res://Scenes/Scripts/Effects/health_effect.gd" id="1_y5d4i"]
 [ext_resource type="Texture2D" uid="uid://7tqcsh0m2k8i" path="res://Assets/Sprites/Cards/Bee.png" id="2_ca040"]
+
+[sub_resource type="Resource" id="Resource_l6nnb"]
+script = ExtResource("1_y5d4i")
+amount = 10
+metadata/_custom_type_script = "uid://ddor6u2ihhqel"
 
 [resource]
 script = ExtResource("1_ca040")
 card_name = "Bee"
 texture = ExtResource("2_ca040")
-effect_name = "set_health"
-target = "SELF"
-value = 10
+effect = SubResource("Resource_l6nnb")

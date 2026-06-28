@@ -1,11 +1,15 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://u55bj2xwxigl"]
 
-[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/card_resources.gd" id="1_6es6o"]
+[ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="1_6es6o"]
+[ext_resource type="Script" uid="uid://c2ljrxo71bybk" path="res://Scenes/Scripts/Effects/biome_effect.gd" id="1_xwa0r"]
 [ext_resource type="Texture2D" uid="uid://dgf73n88ulpa2" path="res://Assets/Sprites/Cards/Plains2.png" id="2_6es6o"]
+
+[sub_resource type="Resource" id="Resource_kiyt5"]
+script = ExtResource("1_xwa0r")
+metadata/_custom_type_script = "uid://c2ljrxo71bybk"
 
 [resource]
 script = ExtResource("1_6es6o")
 card_name = "Plains"
 texture = ExtResource("2_6es6o")
-effect_name = "set_biome"
-target = "NONE"
+effect = SubResource("Resource_kiyt5")
