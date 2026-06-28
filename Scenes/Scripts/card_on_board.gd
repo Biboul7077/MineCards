@@ -1,6 +1,6 @@
 extends Container
 @onready var sprite_2d: Sprite2D = $Sprite2D
-var data := Game.dataCardSelected
+var data = Game.dataCardSelected
 var effect := Callable(Game,data.effect_name)
 
 func _ready() -> void:

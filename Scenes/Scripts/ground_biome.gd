@@ -18,4 +18,4 @@ func changing_biome_texture(biome):
 
 			print("Cellule :", cell, " ID :", source_id)
 
-			set_cell(cell,0,biome[0])
+			set_cell(cell,0,biome["coord"])

@@ -8,4 +8,5 @@ script = ExtResource("1_ca040")
 card_name = "Bee"
 texture = ExtResource("2_ca040")
 effect_name = "set_health"
+target = "SELF"
 value = 10

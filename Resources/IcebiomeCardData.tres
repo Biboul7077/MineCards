@@ -8,4 +8,5 @@ script = ExtResource("1_das4f")
 card_name = "Ice Biome"
 texture = ExtResource("2_das4f")
 effect_name = "set_biome"
+target = "NONE"
 biome = "ICEBIOME"

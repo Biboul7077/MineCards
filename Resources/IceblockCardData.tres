@@ -8,4 +8,6 @@ script = ExtResource("1_ocn7k")
 card_name = "Ice Block"
 texture = ExtResource("2_ocn7k")
 effect_name = "set_health"
+target = "SELF"
+biome = "ICEBIOME"
 value = -2

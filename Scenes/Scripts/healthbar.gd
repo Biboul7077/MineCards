@@ -24,8 +24,8 @@ func is_below(coord: Vector2i) -> bool:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func changing_health_texture(value):
-	print(value[0])
-	health = value[0]
+	print(value["damage"])
+	health = value["damage"]
 	var delta_health := health_max-health
 	var i := 1
 	for cell in health_cell_above:

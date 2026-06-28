@@ -8,4 +8,4 @@ script = ExtResource("1_6es6o")
 card_name = "Plains"
 texture = ExtResource("2_6es6o")
 effect_name = "set_biome"
-biome = "PLAINS"
+target = "NONE"

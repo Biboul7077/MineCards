@@ -8,4 +8,5 @@ script = ExtResource("1_ycowj")
 card_name = "Golem"
 texture = ExtResource("2_ycowj")
 effect_name = "set_health"
+biome = "PLAINS"
 value = -6

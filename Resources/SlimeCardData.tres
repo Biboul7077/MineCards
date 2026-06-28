@@ -8,4 +8,5 @@ script = ExtResource("1_ddair")
 card_name = "Slime"
 texture = ExtResource("2_ddair")
 effect_name = "set_health"
+target = "SELF"
 value = -5
