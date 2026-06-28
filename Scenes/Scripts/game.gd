@@ -3,7 +3,7 @@ const BIOME_COORDINATE := {"PLAINS":Vector2i(0,2),"DESERT":Vector2i(1,2),"ICEBIO
 const MAX_HEALTH := 17
 enum PLAYERS {PLAYER0,PLAYER1}
 
-var card_selected
+var card_selected := false
 var data_card_selected : CardData
 var mouse_on_placement = false
 var current_player := PLAYERS.PLAYER0
@@ -13,7 +13,6 @@ var health := [17,17]
 
 signal changing_biome(args)
 signal changing_health(args)
-signal changing_armor(args)
 
 @onready var card_holder: Node = $CardHolder
 
