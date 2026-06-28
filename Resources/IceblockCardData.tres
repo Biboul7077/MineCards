@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://5dly1boduahf" path="res://Scenes/Scripts/Card/card_resources.gd" id="1_ocn7k"]
 [ext_resource type="Texture2D" uid="uid://dg833jrfsi2ah" path="res://Assets/Sprites/Cards/Ice.png" id="2_ocn7k"]
 
-[sub_resource type="Resource" id="Resource_bt6te"]
+[sub_resource type="Resource" id="Resource_1gtna"]
 script = ExtResource("1_1gtna")
 amount = 2
 biome = "ICEBIOME"
@@ -14,4 +14,4 @@ metadata/_custom_type_script = "uid://cin2fhmrn6yew"
 script = ExtResource("1_ocn7k")
 card_name = "Ice Block"
 texture = ExtResource("2_ocn7k")
-effect = SubResource("Resource_bt6te")
+effect = SubResource("Resource_1gtna")

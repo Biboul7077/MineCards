@@ -3,7 +3,7 @@ extends TileMapLayer
 ## Index du joueur concerné par cette barre (0 = joueur, 1 = adversaire).
 ## A régler dans l'inspecteur pour chaque instance (HealthbarPlayer / HealthbarOpponent).
 @export var target := 0
-@export var health_max := 17
+@export var health_max := Game.MAX_HEALTH
 
 const DAMAGED_SOURCE := 1
 const DAMAGED_ATLAS := Vector2i(1, 1)

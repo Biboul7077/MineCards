@@ -14,4 +14,4 @@ func changing_biome_texture(biome):
 			if tile_data != null:
 				var source_id = get_cell_source_id(cell)
 
-				set_cell(cell,0,biome["coord"])
+				set_cell(cell,source_id,biome["coord"])

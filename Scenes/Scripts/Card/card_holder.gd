@@ -1,7 +1,6 @@
 extends Container
 @onready var sprite_2d: Sprite2D = $Sprite2D
-var data := Game.dataCardSelected
-var cardHeld = ""
+var data := Game.data_card_selected
 
 func _ready() -> void:
 	sprite_2d.texture = data.texture
