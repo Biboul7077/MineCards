@@ -9,7 +9,7 @@ const PLAIN_CARD_DATA = preload("uid://u55bj2xwxigl")
 const SLIME_CARD_DATA = preload("uid://b48py5wsyvpru")
 const CARD = preload("uid://bdpcythmlvs3r")
 
-var deck = [SLIME_CARD_DATA,ICEBLOCK_CARD_DATA,PLAIN_CARD_DATA,GOLEM_CARD_DATA,ICEBIOME_CARD_DATA,KIBBLE_CARD_DATA,BEE_CARD_DATA]
+var deck = [SLIME_CARD_DATA,ICEBLOCK_CARD_DATA,PLAIN_CARD_DATA,GOLEM_CARD_DATA,ICEBIOME_CARD_DATA,KIBBLE_CARD_DATA]
 var maxCardAllowed : int = 6
 var cardLength : int = 112
 var startPosition = 0

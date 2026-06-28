@@ -44,6 +44,7 @@ offset_left = 352.0
 offset_top = 521.0
 offset_right = 788.0
 offset_bottom = 633.0
+alignment = 1
 script = ExtResource("1_tnbny")
 
 [node name="CardHolder" type="Node" parent="." unique_id=1395215025]
