@@ -40,15 +40,15 @@ func _score_health(e: HealthEffect) -> float:
 	var bonus := 1.5 if e.biome == Game.current_biome[ME] and e.biome != "" else 1.0
 	if e.amount < 0:
 		var dmg: float = -e.amount * bonus
-		var effective := max(dmg - Game.armor[FOE], 0.0)
+		var effective = max(dmg - Game.armor[FOE], 0.0)
 		var w := 2.0 if style == Style.AGGRESSIVE else (0.6 if not _foe_is_exhausted() else 2.5)
-		var score := w * effective
+		var score = w * effective
 		if Game.health[FOE] - effective <= 0:
-			score += 1000.0 # priorité au coup de grâce, peu importe le style
+			score += 1000.0
 		return score
 	else:
 		var w := 1.5 if style == Style.ENDURANCE else 0.8
-		var missing := Game.MAX_HEALTH - Game.health[ME]
+		var missing = Game.MAX_HEALTH - Game.health[ME]
 		return w * min(e.amount * bonus, missing)
 
 func _score_armor(e: ArmorEffect) -> float:
@@ -57,15 +57,13 @@ func _score_armor(e: ArmorEffect) -> float:
 	return w * e.amount * bonus
 
 func _score_biome(e: BiomeEffect) -> float:
-	# changer de biome n'a d'intérêt que s'il n'est pas déjà actif
 	if e.biome == Game.current_biome[ME]:
 		return -10.0
 	return 1.0
 
 func _foe_is_exhausted() -> bool:
-	# menace restante = somme des dégâts potentiels encore en main adverse
 	var threat := 0.0
 	for card in Game.hand[FOE]:
 		if card.effect is HealthEffect and card.effect.amount < 0:
 			threat += -card.effect.amount
-	return threat < 8.0 # seuil à ajuster en testant
+	return threat < 8.0
