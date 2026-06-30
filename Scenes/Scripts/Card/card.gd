@@ -13,11 +13,9 @@ func _on_mouse_entered() -> void:
 	animation_card.play("Select")
 	card_highlighted = true
 
-
 func _on_mouse_exited() -> void:
 	animation_card.play("Deselect")
 	card_highlighted = false
-
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == 1:
@@ -29,12 +27,12 @@ func _on_gui_input(event: InputEvent) -> void:
 				Game.card_selected = true
 				sprite_2d.visible = false
 		elif event.button_mask == 0:
-			if Game.mouse_on_placement == false:
+			if Game.mouse_on_placement == false or Game.pending_card[0] != null:
 				card_highlighted = false
 				sprite_2d.visible = true
 			else:
 				self.queue_free()
-				Game.card_placement_node.place_card()
+				Game.submit_card(Game.PLAYERS.PLAYER0, data)
 			for child in Game.card_holder_node.get_children():
 				child.queue_free()
 			Game.card_selected = false
